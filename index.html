@@ -16,27 +16,23 @@
             --gray: #f5f5f5;
             --dark-gray: #757575;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
             background-color: var(--gray);
             color: var(--black);
             line-height: 1.6;
         }
-
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         /* Navigation */
         #navbar {
             position: fixed;
@@ -47,57 +43,42 @@
             z-index: 1000;
             padding: 20px 0;
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             text-decoration: none;
             color: var(--black);
         }
-
         .logo span {
             color: var(--primary);
         }
-
         .nav-links {
             display: flex;
             list-style: none;
         }
-
         .nav-links li {
             margin-left: 30px;
         }
-
         .nav-links a {
             text-decoration: none;
             color: var(--black);
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
         .nav-links a:hover {
             color: var(--primary);
         }
-
         /* Hero Section */
         #home {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
             padding-top: 80px;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
         }
-
         .hero-content {
             max-width: 600px;
         }
-
         h1 {
             font-size: 3rem;
             font-weight: 700;
@@ -107,20 +88,11 @@
             background-clip: text;
             color: transparent;
         }
-
         h2 {
             font-size: 1.8rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
-            color: var(--black);
         }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: var(--dark-gray);
-        }
-
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -131,61 +103,21 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
         .btn:hover {
             background: var(--primary-dark);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3);
         }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 15px;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        /* Sections */
-        .section {
+        /* Projects Section */
+        #projects {
             padding: 100px 0;
         }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title span {
-            color: var(--primary);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-
-        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-
         .project-card {
             background: var(--white);
             border-radius: 8px;
@@ -193,150 +125,74 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
-
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-
         .project-img {
             height: 200px;
             overflow: hidden;
         }
-
         .project-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
         .project-card:hover .project-img img {
             transform: scale(1.05);
         }
-
         .project-info {
             padding: 20px;
         }
-
         .project-info h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
             color: var(--primary-dark);
         }
-
-        .project-info p {
-            color: var(--dark-gray);
-            margin-bottom: 15px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 15px;
-        }
-
         .project-links a {
             color: var(--primary);
             text-decoration: none;
-            font-weight: 500;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 5px;
+            margin-top: 10px;
         }
-
-        .project-links a:hover {
-            color: var(--primary-dark);
-        }
-
         /* Contact Section */
-        .contact-content {
+        #contact {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            margin-top: 50px;
         }
-
         .contact-info {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
-
         .contact-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-
         .contact-card i {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 15px;
+            width: 40px;
         }
-
-        .contact-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
         .contact-card a {
             color: var(--primary);
             text-decoration: none;
         }
-
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-
         .fa-instagram {
             color: #E1306C;
         }
-
-        .contact-form {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content {
-                text-align: center;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 15px;
-            }
-
-            .contact-content {
+            .contact-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -345,7 +201,7 @@
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <div class="container nav-container">
+        <div class="container">
             <a href="#home" class="logo">Mojalefa<span>M.</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -362,7 +218,7 @@
             <div class="hero-content">
                 <h1>Mojalefa Mokhampane</h1>
                 <h2>BSc IT Student | North West University</h2>
-                <p>3rd year Information Technology student specializing in network systems and software development with hands-on experience in Cisco Packet Tracer and Java applications.</p>
+                <p>3rd year Information Technology student specializing in network systems and software development.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View Projects</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -372,38 +228,36 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title">Featured <span>Projects</span></h2>
-            
+            <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="assets/network-project.jpg" alt="Enterprise Network Design">
+                        <img src="assets/network-project.jpg" alt="Network Project">
                     </div>
                     <div class="project-info">
                         <h3>Enterprise Network Design</h3>
-                        <p>Designed a corporate network with VLANs and security protocols using Cisco Packet Tracer.</p>
+                        <p>Corporate network simulation with Cisco Packet Tracer featuring VLANs and security protocols.</p>
                         <div class="project-links">
                             <a href="https://github.com/mojalefa016/network-project" target="_blank">
-                                <i class="fab fa-github"></i> Code
+                                <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="assets/java-project.jpg" alt="Student Management System">
+                        <img src="assets/java-project.jpg" alt="Java Project">
                     </div>
                     <div class="project-info">
                         <h3>Student Management System</h3>
                         <p>Java application with MySQL backend for academic records management.</p>
                         <div class="project-links">
                             <a href="https://github.com/mojalefa016/student-management" target="_blank">
-                                <i class="fab fa-github"></i> Code
+                                <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
@@ -413,37 +267,40 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title">Get In <span>Touch</span></h2>
-            
-            <div class="contact-content">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-card">
                         <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>mojalefamokoala@gmail.com</p>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:mojalefamokoala@gmail.com">mojalefamokoala@gmail.com</a>
+                        </div>
                     </div>
-                    
                     <div class="contact-card">
                         <i class="fab fa-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/mojalefa016" target="_blank">linkedin.com/in/mojalefa016</a>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/mojalefa016" target="_blank">linkedin.com/in/mojalefa016</a>
+                        </div>
                     </div>
-                    
                     <div class="contact-card">
                         <i class="fab fa-github"></i>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/mojalefa016" target="_blank">github.com/mojalefa016</a>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/mojalefa016" target="_blank">github.com/mojalefa016</a>
+                        </div>
                     </div>
-                    
                     <div class="contact-card">
                         <i class="fab fa-instagram"></i>
-                        <h3>Instagram</h3>
-                        <a href="https://instagram.com/mojalefa016" target="_blank">@mojalefa016</a>
+                        <div>
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/mojalefa016" target="_blank">@mojalefa016</a>
+                        </div>
                     </div>
                 </div>
-                
                 <form class="contact-form" action="https://formspree.io/f/mojalefamokoala@gmail.com" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -461,26 +318,12 @@
     </section>
 
     <script>
-        // Sticky Navbar
-        window.addEventListener('scroll', function() {
+        // Sticky navbar
+        window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'var(--white)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+            navbar.style.background = window.scrollY > 50 
+                ? 'rgba(255, 255, 255, 0.98)' 
+                : 'var(--white)';
         });
     </script>
 </body>
