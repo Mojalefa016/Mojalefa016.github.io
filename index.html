@@ -3,327 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mojalefa Mokhampane | BSc IT Student</title>
-    <meta name="description" content="3rd Year BSc IT Student at North West University | Network Specialist | Java & Python Developer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Mojalefa's Professional Portfolio</title>
     <style>
+        /* Global Styles */
         :root {
-            --primary: #1a73e8;
-            --primary-dark: #0d47a1;
-            --accent: #ffc107;
-            --black: #212121;
+            --primary-color: #2c3e50;
+            --secondary-color: #1a252f;
+            --accent-color: #3498db;
+            --light-bg: #f9f9f9;
+            --text-color: #333;
             --white: #ffffff;
-            --gray: #f5f5f5;
-            --dark-gray: #757575;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        
         body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--gray);
-            color: var(--black);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-        }
-        .container {
-            width: 90%;
+            color: var(--text-color);
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-        /* Navigation */
-        #navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
             background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 20px 0;
         }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--black);
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            margin-bottom: 2rem;
+            border-radius: 0 0 8px 8px;
         }
-        .logo span {
-            color: var(--primary);
+        
+        h1, h2, h3 {
+            margin-top: 0;
         }
-        .nav-links {
+        
+        nav {
             display: flex;
-            list-style: none;
+            justify-content: center;
+            gap: 25px;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
-        .nav-links li {
-            margin-left: 30px;
-        }
-        .nav-links a {
+        
+        nav a {
             text-decoration: none;
-            color: var(--black);
-            font-weight: 500;
-            transition: all 0.3s ease;
+            color: var(--white);
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
-        .nav-links a:hover {
-            color: var(--primary);
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
-        /* Hero Section */
-        #home {
-            min-height: 100vh;
+        
+        /* CV Section */
+        #cv-section {
+            padding: 2.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cv-container {
             display: flex;
-            align-items: center;
-            padding-top: 80px;
-            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+            flex-direction: column;
+            gap: 2rem;
         }
-        .hero-content {
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 500;
+        
+        .cv-preview {
             margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
         }
-        .btn {
+        
+        .cv-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .download-btn {
             display: inline-block;
             padding: 12px 24px;
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 4px;
+            background: var(--primary-color);
+            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 600;
+            text-align: center;
         }
-        .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3);
+        
+        .download-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
         }
+        
         /* Projects Section */
         #projects {
-            padding: 100px 0;
+            margin: 4rem 0;
         }
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 25px;
+            margin-top: 2rem;
         }
+        
         .project-card {
-            background: var(--white);
+            border: 1px solid #ddd;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: var(--white);
         }
+        
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        .project-img {
-            height: 200px;
-            overflow: hidden;
+        
+        .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 10px;
         }
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .project-card:hover .project-img img {
-            transform: scale(1.05);
-        }
-        .project-info {
-            padding: 20px;
-        }
-        .project-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
-        }
-        .project-links a {
-            color: var(--primary);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 10px;
-        }
+        
         /* Contact Section */
         #contact {
-            padding: 100px 0;
-            background: var(--white);
+            margin: 4rem 0;
+            padding: 2.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
+        
         .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            margin-top: 1.5rem;
         }
-        .contact-card {
+        
+        .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
+            margin-bottom: 1rem;
         }
-        .contact-card i {
-            font-size: 1.5rem;
-            color: var(--primary);
-            width: 40px;
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid #eee;
+            color: var(--text-color);
         }
-        .contact-card a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        .fa-instagram {
-            color: #E1306C;
-        }
-        /* Responsive */
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .contact-container {
+            .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .cv-container {
+                flex-direction: column;
+            }
+            
+            header {
+                padding: 2rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <a href="#home" class="logo">Mojalefa<span>M.</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="Mojalefa-cv.pdf" download="Mojalefa_CV.pdf">Download CV</a>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Mojalefa Mokhampane</h1>
-                <h2>BSc IT Student | North West University</h2>
-                <p>3rd year Information Technology student specializing in network systems and software development.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
+    <header>
+        <h1>Mojalefa's Portfolio</h1>
+        <p>Web Developer | Designer | Creative Professional</p>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#cv-section">My CV</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Projects Section -->
+        <section id="projects">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/network-project.jpg" alt="Network Project">
-                    </div>
-                    <div class="project-info">
-                        <h3>Enterprise Network Design</h3>
-                        <p>Corporate network simulation with Cisco Packet Tracer featuring VLANs and security protocols.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mojalefa016/network-project" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="#" class="download-btn">View Live</a>
+                        <a href="#" class="download-btn">Code</a>
                     </div>
                 </div>
-                <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/java-project.jpg" alt="Java Project">
+                    <h3>E-commerce Platform</h3>
+                    <p>Full-stack e-commerce solution with React and Node.js.</p>
+                    <div class="project-links">
+                        <a href="#" class="download-btn">View Live</a>
+                        <a href="#" class="download-btn">Code</a>
                     </div>
-                    <div class="project-info">
-                        <h3>Student Management System</h3>
-                        <p>Java application with MySQL backend for academic records management.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/mojalefa016/student-management" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
+                </div>
+                <div class="project-card">
+                    <h3>Mobile App Design</h3>
+                    <p>UI/UX design for a fitness tracking mobile application.</p>
+                    <div class="project-links">
+                        <a href="#" class="download-btn">View Demo</a>
+                        <a href="#" class="download-btn">Case Study</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:mojalefamokoala@gmail.com">mojalefamokoala@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <a href="https://linkedin.com/in/mojalefa016" target="_blank">linkedin.com/in/mojalefa016</a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <a href="https://github.com/mojalefa016" target="_blank">github.com/mojalefa016</a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-instagram"></i>
-                        <div>
-                            <h3>Instagram</h3>
-                            <a href="https://instagram.com/mojalefa016" target="_blank">@mojalefa016</a>
-                        </div>
-                    </div>
+        </section>
+        
+        <!-- CV Section -->
+        <section id="cv-section">
+            <h2>My Curriculum Vitae</h2>
+            <div class="cv-container">
+                <div class="cv-preview">
+                    <iframe 
+                        src="Mojalefa-cv.pdf#toolbar=0&navpanes=0" 
+                        width="100%" 
+                        height="600px"
+                        style="border: none;"
+                    >
+                        <p>Your browser doesn't support PDFs. <a href="Mojalefa-cv.pdf">Download my CV instead</a>.</p>
+                    </iframe>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/mojalefamokoala@gmail.com" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                
+                <div class="cv-actions">
+                    <a href="Mojalefa-cv.pdf" download="Mojalefa_Professional_CV.pdf" class="download-btn">
+                        📄 Download Full CV (PDF)
+                    </a>
+                    <a href="Mojalefa-cv.pdf" target="_blank" class="download-btn">
+                        🔗 Open in New Tab
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm available for freelance work and full-time opportunities. Let's connect!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:mojalefa@example.com">mojalefa@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <a href="https://linkedin.com/in/mojalefa" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <span>💻</span>
+                    <a href="https://github.com/Mojalefa016" target="_blank">GitHub Profile</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+27 12 345 6789</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Mojalefa's Portfolio. All rights reserved.</p>
+        <p>Designed and built with ❤️ by Mojalefa</p>
+    </footer>
 
     <script>
-        // Sticky navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            navbar.style.background = window.scrollY > 50 
-                ? 'rgba(255, 255, 255, 0.98)' 
-                : 'var(--white)';
+        // Auto-update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
