@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mojalefa's Professional Portfolio</title>
+    <title>Mojalefa Mokoala's Portfolio</title>
     <style>
         /* Global Styles */
         :root {
@@ -155,6 +155,30 @@
             margin-bottom: 1rem;
         }
         
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            background-color: var(--secondary-color);
+        }
+        
         footer {
             text-align: center;
             margin-top: 4rem;
@@ -181,7 +205,7 @@
 </head>
 <body>
     <header>
-        <h1>Mojalefa's Portfolio</h1>
+        <h1>Mojalefa Mokoala</h1>
         <p>Web Developer | Designer | Creative Professional</p>
         <nav>
             <a href="#projects">Projects</a>
@@ -199,8 +223,8 @@
                     <h3>Portfolio Website</h3>
                     <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
                     <div class="project-links">
-                        <a href="#" class="download-btn">View Live</a>
-                        <a href="#" class="download-btn">Code</a>
+                        <a href="https://mojalefa016.github.io" target="_blank" class="download-btn">View Live</a>
+                        <a href="https://github.com/Mojalefa016/Mojalefa016.github.io" target="_blank" class="download-btn">Code</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -238,7 +262,7 @@
                 </div>
                 
                 <div class="cv-actions">
-                    <a href="Mojalefa-cv.pdf" download="Mojalefa_Professional_CV.pdf" class="download-btn">
+                    <a href="Mojalefa-cv.pdf" download="Mojalefa_Mokoala_CV.pdf" class="download-btn">
                         📄 Download Full CV (PDF)
                     </a>
                     <a href="Mojalefa-cv.pdf" target="_blank" class="download-btn">
@@ -256,26 +280,34 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <span>📧</span>
-                    <a href="mailto:mojalefa@example.com">mojalefa@example.com</a>
-                </div>
-                <div class="contact-item">
-                    <span>🔗</span>
-                    <a href="https://linkedin.com/in/mojalefa" target="_blank">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">
-                    <span>💻</span>
-                    <a href="https://github.com/Mojalefa016" target="_blank">GitHub Profile</a>
+                    <a href="mailto:mojalefamokoala@gmail.com">mojalefamokoala@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span>📱</span>
-                    <span>+27 12 345 6789</span>
+                    <a href="tel:+27810883754">081 088 3754</a>
                 </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>South Africa</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mojalefa016" target="_blank" class="social-icon" title="LinkedIn">
+                    <span>LI</span>
+                </a>
+                <a href="https://github.com/Mojalefa016" target="_blank" class="social-icon" title="GitHub">
+                    <span>GH</span>
+                </a>
+                <a href="https://instagram.com/mojalefa016" target="_blank" class="social-icon" title="Instagram">
+                    <span>IG</span>
+                </a>
             </div>
         </section>
     </main>
     
     <footer>
-        <p>&copy; <span id="year"></span> Mojalefa's Portfolio. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Mojalefa Mokoala. All rights reserved.</p>
         <p>Designed and built with ❤️ by Mojalefa</p>
     </footer>
 
