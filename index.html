@@ -1,329 +1,139 @@
-2<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mojalefa Mokhampane's Portfolio</title>
-    <style>
-        /* Global Styles */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #1a252f;
-            --accent-color: #3498db;
-            --light-bg: #f9f9f9;
-            --text-color: #333;
-            --white: #ffffff;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            background-color: var(--white);
-        }
-        
-        header {
-            text-align: center;
-            padding: 3rem 0;
-            background-color: var(--primary-color);
-            color: var(--white);
-            margin-bottom: 2rem;
-            border-radius: 0 0 8px 8px;
-        }
-        
-        h1, h2, h3 {
-            margin-top: 0;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: var(--white);
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        /* CV Section */
-        #cv-section {
-            padding: 2.5rem;
-            background: var(--light-bg);
-            border-radius: 8px;
-            margin: 3rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .cv-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .cv-preview {
-            margin-bottom: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .cv-actions {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            font-weight: 600;
-            text-align: center;
-        }
-        
-        .download-btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-        
-        /* Projects Section */
-        #projects {
-            margin: 4rem 0;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 2rem;
-        }
-        
-        .project-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background: var(--white);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .project-links {
-            margin-top: 1rem;
-            display: flex;
-            gap: 10px;
-        }
-        
-        /* Contact Section */
-        #contact {
-            margin: 4rem 0;
-            padding: 2.5rem;
-            background: var(--light-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-info {
-            margin-top: 1.5rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 1.5rem;
-        }
-        
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        
-        .social-icon:hover {
-            transform: scale(1.1);
-            background-color: var(--secondary-color);
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 2rem;
-            border-top: 1px solid #eee;
-            color: var(--text-color);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cv-container {
-                flex-direction: column;
-            }
-            
-            header {
-                padding: 2rem 0;
-            }
-        }
-    </style>
+    <title>Mojalefa Mokhampane | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Mojalefa Mokhampane</h1>
-        <p>Web Developer | Designer | Creative Professional</p>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#cv-section">My CV</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
-                    <div class="project-links">
-                        <a href="https://mojalefa016.github.io" target="_blank" class="download-btn">View Live</a>
-                        <a href="https://github.com/Mojalefa016/Mojalefa016.github.io" target="_blank" class="download-btn">Code</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>E-commerce Platform</h3>
-                    <p>Full-stack e-commerce solution with React and Node.js.</p>
-                    <div class="project-links">
-                        <a href="#" class="download-btn">View Live</a>
-                        <a href="#" class="download-btn">Code</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Mobile App Design</h3>
-                    <p>UI/UX design for a fitness tracking mobile application.</p>
-                    <div class="project-links">
-                        <a href="#" class="download-btn">View Demo</a>
-                        <a href="#" class="download-btn">Case Study</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CV Section -->
-        <section id="cv-section">
-            <h2>My Curriculum Vitae</h2>
-            <div class="cv-container">
-                <div class="cv-preview">
-                    <iframe 
-                        src="Mojalefa-cv.pdf#toolbar=0&navpanes=0" 
-                        width="100%" 
-                        height="600px"
-                        style="border: none;"
-                    >
-                        <p>Your browser doesn't support PDFs. <a href="Mojalefa-cv.pdf">Download my CV instead</a>.</p>
-                    </iframe>
-                </div>
-                
-                <div class="cv-actions">
-                    <a href="Mojalefa-cv.pdf" download="Mojalefa_Mokoala_CV.pdf" class="download-btn">
-                        📄 Download Full CV (PDF)
-                    </a>
-                    <a href="Mojalefa-cv.pdf" target="_blank" class="download-btn">
-                        🔗 Open in New Tab
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm available for freelance work and full-time opportunities. Let's connect!</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📧</span>
-                    <a href="mailto:mojalefamokoala@gmail.com">mojalefamokoala@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <a href="tel:+27810883754">081 088 3754</a>
-                </div>
-                <div class="contact-item">
-                    <span>📍</span>
-                    <span>South Africa</span>
-                </div>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mojalefa016" target="_blank" class="social-icon" title="LinkedIn">
-                    <span>LI</span>
-                </a>
-                <a href="https://github.com/Mojalefa016" target="_blank" class="social-icon" title="GitHub">
-                    <span>GH</span>
-                </a>
-                <a href="https://instagram.com/mojalefa_016" target="_blank" class="social-icon" title="Instagram">
-                    <span>IG</span>
-                </a>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; <span id="year"></span> Mojalefa Mokhampane. All rights reserved.</p>
-        <p>Designed and built with ❤️ by Mojalefa</p>
-    </footer>
 
-    <script>
-        // Auto-update copyright year
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+<!-- HERO -->
+<header id="navbar" class="hero">
+    <h1>Mojalefa Mokhampane</h1>
+    <p>Software Developer | Data Enthusiast | BSc IT Student</p>
+
+    <div class="hero-btns">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="documents/Mojalefa_CV.pdf" download class="btn-outline">Download CV</a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a BSc Information Technology student passionate about software development,
+        data analysis, and building practical systems. I focus on solving real-world problems
+        and continuously improving my technical skills.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skill">
+        <p>Java</p>
+        <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>SQL</p>
+        <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>HTML/CSS/JS</p>
+        <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Networking</p>
+        <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Designed and developed a responsive portfolio website showcasing projects and skills.
+                Focused on clean UI, smooth navigation, and performance.
+            </p>
+
+            <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://mojalefa016.github.io" target="_blank" class="btn">Live</a>
+                <a href="https://github.com/Mojalefa016/Mojalefa016.github.io" target="_blank" class="btn-outline">Code</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CV -->
+<section class="section">
+    <h2>My Resume</h2>
+
+    <iframe src="documents/Mojalefa_CV.pdf" width="100%" height="500px"></iframe>
+
+    <div class="doc-actions">
+        <a href="documents/Mojalefa_CV.pdf" download class="btn">Download CV</a>
+        <a href="documents/Mojalefa_CV.pdf" target="_blank" class="btn-outline">Open</a>
+    </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="section">
+    <h2>Documents & Credentials</h2>
+    <p>All documents are available for verification and download.</p>
+
+    <div class="doc-card">
+        <h3>Academic Record</h3>
+        <iframe src="documents/Academic_Record.pdf" width="100%" height="400px"></iframe>
+
+        <div class="doc-actions">
+            <a href="documents/Academic_Record.pdf" target="_blank" class="btn-outline">View Full</a>
+            <a href="documents/Academic_Record.pdf" download class="btn">Download</a>
+        </div>
+    </div>
+
+    <div class="doc-card">
+        <h3>Completion Letter</h3>
+        <iframe src="documents/Completion_Letter.pdf" width="100%" height="400px"></iframe>
+
+        <div class="doc-actions">
+            <a href="documents/Completion_Letter.pdf" target="_blank" class="btn-outline">View Full</a>
+            <a href="documents/Completion_Letter.pdf" download class="btn">Download</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+    <h2>Contact Me</h2>
+    <p>Open to internships and graduate opportunities.</p>
+
+    <p>Email: <a href="mailto:mojalefamokoala@gmail.com">mojalefamokoala@gmail.com</a></p>
+    <p>Phone: 081 088 3754</p>
+
+    <div class="hero-btns">
+        <a href="https://github.com/Mojalefa016" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/mojalefa016" target="_blank" class="btn-outline">LinkedIn</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Mojalefa Mokhampane</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
