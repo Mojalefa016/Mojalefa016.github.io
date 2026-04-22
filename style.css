@@ -1,30 +1,20 @@
-/* ===== Modern Tech Portfolio UI ===== */
 :root {
-  --primary: #2563eb;
-  --secondary: #1e293b;
-  --accent: #fbbf24;
   --bg: #0f172a;
   --card: #1e293b;
+  --primary: #3b82f6;
+  --accent: #fbbf24;
   --text: #e2e8f0;
   --muted: #94a3b8;
 }
 
-/* Base */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 
-/* Sections */
-.section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
@@ -33,7 +23,6 @@ body {
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
   background: linear-gradient(90deg, #60a5fa, #fbbf24);
   -webkit-background-clip: text;
   color: transparent;
@@ -41,131 +30,81 @@ body {
 
 .hero p {
   color: var(--muted);
-  font-size: 1.2rem;
 }
 
-.hero-btns {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+/* BUTTONS */
+.btn, .btn-outline {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
 }
 
-/* ===== BUTTONS ===== */
 .btn {
-  background: linear-gradient(90deg, var(--primary), #3b82f6);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
-}
-
-.btn-outline {
-  border: 1px solid var(--primary);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--primary);
-}
-
-.btn-outline:hover {
   background: var(--primary);
   color: white;
 }
 
-/* ===== HEADINGS ===== */
-h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  border-left: 5px solid var(--accent);
-  padding-left: 10px;
+.btn-outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
-/* ===== PROJECTS ===== */
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* PROJECTS */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
 }
 
 .project-card {
   background: var(--card);
-  padding: 25px;
-  border-radius: 12px;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-}
-
-.tech-tags span {
-  display: inline-block;
-  background: #334155;
-  padding: 6px 10px;
-  margin: 5px 5px 0 0;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-/* ===== SKILLS ===== */
-.skill {
-  margin-bottom: 25px;
-}
-
+/* SKILLS */
 .progress-bar {
   background: #1e293b;
-  height: 12px;
-  border-radius: 6px;
+  height: 10px;
+  border-radius: 5px;
 }
 
 .progress {
-  height: 12px;
-  border-radius: 6px;
-  background: linear-gradient(90deg, #3b82f6, #fbbf24);
+  height: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
-/* ===== DOCUMENTS ===== */
+/* DOCS */
+iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
 .doc-card {
-  background: var(--card);
-  padding: 20px;
-  margin-top: 25px;
-  border-radius: 12px;
-  transition: 0.3s;
+  margin-top: 20px;
 }
 
-.doc-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ===== CONTACT ===== */
+/* CONTACT */
 .contact {
   text-align: center;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-  background: #020617;
   text-align: center;
-  padding: 30px;
-  color: var(--muted);
+  padding: 20px;
+  background: #020617;
 }
+ 
 
-/* ===== ANIMATIONS ===== */
-.section {
-  animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
