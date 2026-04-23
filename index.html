@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mojalefa Mokhampane | Portfolio</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
 
   <style>
+    /* ── RESET & VARIABLES ── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
@@ -35,6 +37,7 @@
       overflow-x: hidden;
     }
 
+    /* ── GRID BACKGROUND ── */
     body::before {
       content: '';
       position: fixed;
@@ -47,6 +50,7 @@
       z-index: 0;
     }
 
+    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -101,6 +105,7 @@
       box-shadow: 0 8px 24px rgba(245,166,35,.3) !important;
     }
 
+    /* ── HERO ── */
     .hero {
       min-height: 100svh;
       display: flex;
@@ -111,6 +116,62 @@
       padding: 8rem 1.5rem 4rem;
       position: relative;
       z-index: 1;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      margin-bottom: 2rem;
+      animation: fadeUp .8s ease both;
+      display: inline-block;
+    }
+
+    .hero-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid var(--accent);
+      box-shadow:
+        0 0 0 6px rgba(245,166,35,.12),
+        0 0 40px rgba(245,166,35,.25);
+      display: block;
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .hero-photo:hover {
+      transform: scale(1.06);
+      box-shadow:
+        0 0 0 8px rgba(245,166,35,.18),
+        0 0 60px rgba(245,166,35,.35);
+    }
+
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 2px dashed rgba(245,166,35,.35);
+      animation: spinRing 12s linear infinite;
+    }
+
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      background: #22c55e;
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 8px rgba(34,197,94,.6);
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes spinRing {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
     }
 
     .hero-badge {
@@ -213,6 +274,7 @@
       transform: translateY(-3px);
     }
 
+    /* hero scroll indicator */
     .scroll-hint {
       position: absolute;
       bottom: 2rem;
@@ -243,6 +305,7 @@
       100% { opacity: 0; transform: scaleY(1); }
     }
 
+    /* ── SECTION ── */
     section {
       padding: 6rem 1.5rem;
       max-width: 1000px;
@@ -270,6 +333,7 @@
       margin-bottom: 1.5rem;
     }
 
+    /* ── ABOUT ── */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -320,6 +384,7 @@
       margin-top: .2rem;
     }
 
+    /* ── SKILLS ── */
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -374,6 +439,7 @@
       transition: width 1.2s cubic-bezier(.4,0,.2,1);
     }
 
+    /* ── PROJECTS ── */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -457,6 +523,7 @@
       padding: .55rem 1.2rem;
     }
 
+    /* ── DOCUMENTS ── */
     .doc-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -516,6 +583,7 @@
       padding: .55rem .8rem;
     }
 
+    /* resume iframe */
     .resume-wrap {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -538,12 +606,19 @@
       border-top: 1px solid var(--border);
     }
 
+    /* ── CONTACT ── */
     .contact-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2.5rem;
       margin-top: 2rem;
       align-items: start;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
     .contact-detail {
@@ -603,8 +678,11 @@
       transform: translateX(6px);
     }
 
-    .social-link .sl-icon { font-size: 1.2rem; }
+    .social-link .sl-icon {
+      font-size: 1.2rem;
+    }
 
+    /* ── DIVIDER ── */
     .divider {
       max-width: 1000px;
       margin: 0 auto;
@@ -612,6 +690,7 @@
       background: linear-gradient(90deg, transparent, var(--border), transparent);
     }
 
+    /* ── FOOTER ── */
     footer {
       text-align: center;
       padding: 3rem 1.5rem;
@@ -623,6 +702,7 @@
 
     footer span { color: var(--accent); }
 
+    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -639,6 +719,7 @@
       transform: none;
     }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
       nav { padding: 1rem 1.2rem; }
       .nav-links { display: none; }
@@ -665,6 +746,11 @@
 
 <!-- HERO -->
 <header class="hero">
+  <!-- PROFILE PHOTO -->
+  <div class="hero-photo-wrap">
+    <img src="Jeff.jpg" alt="Mojalefa Mokhampane" class="hero-photo"/>
+  </div>
+
   <div class="hero-badge">BSc IT Graduate · Open to Opportunities</div>
 
   <h1>
@@ -694,13 +780,13 @@
     <div class="about-text reveal">
       <p>
         I'm a BSc Information Technology graduate with a passion for software
-        engineering, backend systems, and database design. I enjoy turning
-        complex problems into clean, elegant solutions.
+        engineering, backend systems, and database design. I enjoy turning complex problems into clean,
+        elegant solutions.
       </p>
       <p>
-        Whether it's building Java-based backend systems, writing efficient
-        SQL queries, or designing network architectures — I focus on writing
-        clean code and continuously sharpening my technical skills.
+        Whether it's building Java-based backend systems, writing efficient SQL queries, or designing
+        network architectures — I focus on writing clean code and continuously
+        sharpening my technical skills.
       </p>
     </div>
 
@@ -775,7 +861,6 @@
   <h2 class="reveal">Projects</h2>
 
   <div class="projects-grid">
-
     <div class="project-card reveal">
       <h3>Personal Portfolio — Responsive Web App</h3>
       <p>
@@ -813,7 +898,6 @@
         <a href="https://github.com/Mojalefa016/grade-tracker" target="_blank" class="btn-outline">⌥ Code</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -838,7 +922,7 @@
 <!-- DOCUMENTS -->
 <section id="documents">
   <span class="section-label reveal">Credentials</span>
-  <h2 class="reveal">Documents &amp; Credentials</h2>
+  <h2 class="reveal">Documents & Credentials</h2>
 
   <div class="doc-grid">
     <div class="doc-card reveal">
@@ -930,7 +1014,7 @@
 </footer>
 
 <script>
-  /* Scroll-reveal */
+  /* ── Scroll-reveal ── */
   const observer = new IntersectionObserver(
     entries => entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); }
@@ -939,7 +1023,7 @@
   );
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  /* Animate skill bars on scroll */
+  /* ── Animate skill bars on scroll ── */
   const barObserver = new IntersectionObserver(
     entries => entries.forEach(e => {
       if (e.isIntersecting) {
@@ -952,7 +1036,7 @@
   );
   document.querySelectorAll('.skill-item').forEach(el => barObserver.observe(el));
 
-  /* Nav shadow on scroll */
+  /* ── Nav shadow on scroll ── */
   window.addEventListener('scroll', () => {
     document.querySelector('nav').style.boxShadow =
       window.scrollY > 20 ? '0 4px 40px rgba(0,0,0,.5)' : 'none';
